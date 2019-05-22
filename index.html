@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Work task: Mohammed Hammoud</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body onload="App.init()">
+    <div class="wrapper">
+        <h1>WORK TASK: Mohammed Hammoud</h1>
+        <section class="block">
+            <header class="block-number">
+                <span>1</span>
+                <h3>CSS-wizardry</h3>
+            </header>
+            <div class="block-content">
+                <button class="button-delete">Delete</button>
+            </div>
+        </section>
+
+        <section class="block">
+            <header class="block-number">
+                <span>2</span>
+                <h3>Answer survey monkey</h3>
+            </header>
+            <div class="block-content">
+                <p>Done</p>
+            </div>
+        </section>
+
+        <section class="block">
+            <header class="block-number">
+                <span>3</span>
+                <h3>Search Application</h3>
+            </header>
+            <div class="block-content">
+                <div class="search-container">
+                    <input
+                        id="search-input"
+                        onkeyup="App.onInputKeyUp(event)"
+                        type="search"
+                        autofocus="true"
+                        placeholder="Search country"
+                        id="search-input"/>
+                    <ul id="search-results"></ul>
+                    <div id="search-history-container">
+                        <div class="search-history-header">
+                            <h2 class="search-history-header-title">Search history</h2>
+                            <a class="search-history-header-resetter" onclick="App.resetHistory(event)">Clear search history</a>
+                        </div>
+                        <ul id="search-history-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

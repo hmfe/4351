@@ -1,0 +1,219 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 24px;
+    background: #f9f9f9;
+}
+
+p {
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.block {
+    padding: 20px;
+    background: #ffffff;
+    border: 1px dashed;
+    margin-bottom: 30px;
+}
+
+.block-number {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.block-number span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #ffffff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.block-number h3 {
+    display: flex;
+    font-size: 16px;
+    margin: 0;
+}
+
+.block-content {
+    flex: 1;
+}
+
+.button-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4b05d;
+    background: -moz-linear-gradient(left, #f4b05d 0%, #dc9245 100%);
+    background: -webkit-linear-gradient(left, #f4b05d 0%, #dc9245 100%);
+    background: linear-gradient(to right, #f4b05d 0%, #dc9245 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4b05d', endColorstr='#dc9245', GradientType=1);
+
+    border: #808080 2px solid;
+    height: 140px;
+    width: 270px;
+    font-weight: bold;
+    font-size: 34px
+}
+
+.button-delete {
+    outline: 0;
+    cursor: pointer;
+}
+
+.button-delete::after {
+    content: "\d7";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #000000;
+    width: 100px;
+    height: 90px;
+    padding-bottom: 10px;
+    margin-left: 16px;
+    border-radius: 50%;
+    font-size: 80px;
+    font-weight: normal;
+}
+
+.button-delete:hover {
+    opacity: 0.9;
+}
+
+.button-delete:active {
+    margin-top: 1px;
+    opacity: 0.8;
+}
+
+.search-container {
+    position: relative;
+}
+
+#search-input {
+    width: 100%;
+    border: 2px solid #eaeaea;
+    padding: 20px;
+    font-size: 24px;
+    outline: 0;
+}
+
+#search-results {
+    position: absolute;
+    background: white;
+    display: none;
+    z-index: 1;
+    width: 100%;
+    border: 2px solid #eaeaea;
+    padding: 0;
+    margin: 4px 0 0 0;
+    font-size: 16px;
+    outline: 0;
+    list-style: none;
+    overflow: scroll;
+    max-height: 194px;
+}
+
+.search-result-item {
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    opacity: 0.5;
+}
+
+#search-history-list {
+    display: block;
+    list-style: none;
+    padding: 0;
+}
+
+.search-history-list-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-top: 1px solid #eaeaea;
+}
+
+.search-history-list-item:last-child {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.search-history-header {
+    display: flex;
+    align-items: center;
+}
+
+.search-history-header-title {
+    flex: 1;
+}
+
+#search-history-container {
+    display: none;
+}
+
+.search-history-header-resetter {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.search-history-list-item-title {
+    flex: 1;
+    color: #666666;
+}
+
+.search-history-list-item-timestamp {
+    color: #cacaca;
+    font-size: 14px;
+}
+
+.search-history-list-item-delete {
+    cursor: pointer;
+}
+
+.search-history-list-item-delete::after {
+    content: "\d7";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9b9b9b;
+    margin-left: 32px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+
+@media screen and (max-width: 600px) {
+    .search-history-header {
+        display: block;
+        text-align: center;
+    }
+
+    .search-history-list-item-timestamp {
+        flex: 1;
+    }
+
+    .search-history-header-title {
+        font-size: 18px;
+    }
+
+    .search-history-header-resetter {
+        font-size: 14px;
+    }
+
+    #search-input {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
